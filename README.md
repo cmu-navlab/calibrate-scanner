@@ -17,7 +17,7 @@ The following is a list of sample steps that can be used to calibrate a scanner.
         >> writeCloudToFile(cloud, 'cloud.txt');
 5. Use a tool like [CloudCompare](http://www.danielgm.net/cc/) to manually select seed points for planes from **cloud.txt** generated in the previous step. For the sample data, you can simply use the below.
 
-        planesSeeds = [348411, 361366; 371243, 386116; 206511, 301356];
+        >> planesSeeds = [348411, 361366; 371243, 386116; 206511, 301356];
 6. The planes can be segmented from the point cloud using the planes seed points. To visualize the segmented planes, use the following commands. This step is not required for performing calibration.
 
         >> [planesPointIndices, ~] = segmentPlanes(cloud, planesSeeds, 0.03);
